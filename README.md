@@ -1,2 +1,3 @@
 # ReiFluid
- A fluid solver written
+ A fluid solver written by CUDA and OpenGL.
+ Reference:
