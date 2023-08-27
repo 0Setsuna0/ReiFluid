@@ -6,7 +6,7 @@
 
 
 //cubic spline kernel,comes from [Monaghan1992]
-static __host__ __device__ float cubicSplineKernel_device(const float distance, const float kernelRadius)
+static __device__ float cubicSplineKernel_device(const float distance, const float kernelRadius)
 {
 	const auto q = 2.0f * fabs(distance) / kernelRadius;
 	if (q > 2.0f || q < 1e-6f) return 0.0f;
@@ -16,7 +16,7 @@ static __host__ __device__ float cubicSplineKernel_device(const float distance, 
 	}
 }
 
-static __host__ __device__ float3 cubicSplineKernelGradient_device(const float3 dir, const float kernelRadius)
+static __device__ float3 cubicSplineKernelGradient_device(const float3 dir, const float kernelRadius)
 {
 	auto q = 2.0f * length(dir) / kernelRadius;
 	if (q > 2.0f) return make_float3(0.0f);
