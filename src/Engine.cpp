@@ -5,6 +5,7 @@ Engine::Engine()
 	ui = UI();
 	//camera = Camera();
 	renderer = Renderer();
+	//parameter reference from: https://github.com/zhai-xiao/CPP-Fluid-Particles
 	const float3 spaceSize = make_float3(1.0f);
 	const float sphSpacing = 0.02f;
 	const float sphSmoothingRadius = 2.0f * sphSpacing;
